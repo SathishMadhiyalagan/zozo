@@ -1,0 +1,150 @@
+
+body{
+    margin: 0;
+    
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    width: 1200px;
+}
+.headerTop{
+    padding: 10px 0px;
+}
+.headerTop{
+    display: flex;
+    align-items: center;
+}
+.menuLinks{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
+.menuLinks li{
+    list-style-type: none;
+    font-size: 20px;
+    padding: 0px 20px 
+}
+.menuLinks a:hover{
+    text-decoration: none;
+    color: red;
+}
+.menuLinks a{
+    text-decoration: none;
+    color: #000;
+}
+.bannerSec{
+    background: url(https://cdn.demandfarm.com/2023/07/sales-leader-1.webp) no-repeat;
+    background-size: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+.profImg img{
+    width: 100px;
+    border-radius: 50%;
+}
+.profImg p{
+    color: #fff;
+    font-size: 20px;
+    padding-top: 5px;
+    margin: 0;
+}
+.profImg span{
+    color: #fff;
+    font-size: 12px;
+}
+.profImg{
+   padding-top: 20px;
+}
+.bannerSec h1{
+    color: #fff;
+    font-size: 50px;
+    line-height: 65px;
+}
+.bannerSec p{
+    color: #fff;
+}
+.planInner img{
+    width: 100px;
+}
+.planInner {
+    border: 1px solid #000;
+    padding: 100px 50px;
+    margin-bottom:50px ;
+    position: relative;
+    text-align: center;
+}
+
+.planInner img{
+    position: absolute;
+    top: -50px;
+    left: 80px;
+}
+.accPlanning h2 {
+    padding: 10px;
+}
+.accPlanning p {
+    text-align: center;
+
+}
+.headInfo{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 85px;
+    padding-top: 40px;
+}
+.hideInDesktop{
+    display: none;
+}
+.menuLinks li:hover .hideInDesktop{
+    display: block;
+    position: absolute;
+    background: #fff;
+    padding: 10px 0px;
+}
+
+
+.menuLinks a{
+    position: relative;
+}
+.menuBars {
+    display: none;
+}
+.menuBars span{
+    background-color: red;
+    width: 30px;
+    height: 4px;
+    color: red;
+    margin: 5px 0px;
+    display: block;
+    cursor: pointer;
+}
+.mobileMenu{
+    display: none;
+}
+@media(max-width:850px){
+    .menuLinks{
+        display: none;
+        padding: 10px;
+        position: absolute;
+        right: 15px;
+        top: 50px;
+        background-color: red;
+    }
+    .menuBars{
+        display: block;
+        position: absolute;
+        right: 15px;
+    }
+    .menuBars:hover + .mobileMenu {
+        display: contents;
+    }
+}
