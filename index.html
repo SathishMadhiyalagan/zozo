@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -29,36 +29,31 @@
                             <li><a href="#">Sub Menu 4</a></li>
                         </ul>
                     </li>
-                    <a href="">
-                        <li>Pricing</li>
-                    </a>
-                    <a href="">
-                        <li>Resources</li>
-                    </a>
-                    <a href="">
-                        <li>Company</li>
-                    </a>
-                    <a href="">
-                        <li>About</li>
-                    </a>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
-                <div class="menuBars">
+                <div class="menuBars" onclick="menuOpen('open')">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+
+                <div class="menuBarsClose"  onclick="menuOpen('close')"><svg width="40" height="40" viewbox="0 0 40 40"><path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="black" stroke-width="4" /></svg></div>
+
+                <div class="mobileMenu" id="mobileMenuId">
+                    <ul>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="mobileMenu">
-            <ul>
-                <li><a href="#">menu 1</a></li>
-                <li><a href="#">menu 1</a></li>
-                <li><a href="#">menu 1</a></li>
-                <li><a href="#">menu 1</a></li>
-                <li><a href="#">menu 1</a></li>
-                <li><a href="#">menu 1</a></li>
-            </ul>
-        </div>
+
     </header>
     <section>
         <div class="bannerSec">
@@ -92,45 +87,50 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
     <section>
         <div class="accPlanning">
             <div class="container">
-               <div class="headInfo">
-                <div class="col-sm-7" style="margin: 0 auto;">
-                    <h2>Is your account planning template the best it can be?</h2>
-                <p>Strong key account planning strategy is essential for success. Thats why our seasoned professionals 
-                    are here to help you take your teams account planning template to the next level.</p>
+                <div class="headInfo">
+                    <div class="col-sm-7" style="margin: 0 auto;">
+                        <h2>Is your account planning template the best it can be?</h2>
+                        <p>Strong key account planning strategy is essential for success. Thats why our seasoned
+                            professionals
+                            are here to help you take your teams account planning template to the next level.</p>
+                    </div>
                 </div>
-               </div>
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="planInner">
-                            <img src="https://www.demandfarm.com/wp-content/uploads/2023/10/Scattered-.svg" alt="Scattered">
+                            <img src="https://www.demandfarm.com/wp-content/uploads/2023/10/Scattered-.svg"
+                                alt="Scattered">
                             <h6>Expert Panel</h6>
                             <p>Get your templated audited by our panel of seasoned Key Account Mangement Expert</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="planInner">
-                            <img src="https://www.demandfarm.com/wp-content/uploads/2023/10/Scattered-.svg" alt="Scattered">
+                            <img src="https://www.demandfarm.com/wp-content/uploads/2023/10/Scattered-.svg"
+                                alt="Scattered">
                             <h6>Expert Panel</h6>
                             <p>Get your templated audited by our panel of seasoned Key Account Mangement Expert</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="planInner">
-                            <img src="https://www.demandfarm.com/wp-content/uploads/2023/10/Scattered-.svg" alt="Scattered">
+                            <img src="https://www.demandfarm.com/wp-content/uploads/2023/10/Scattered-.svg"
+                                alt="Scattered">
                             <h6>Expert Panel</h6>
                             <p>Get your templated audited by our panel of seasoned Key Account Mangement Expert</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="planInner">
-                            <img src="https://www.demandfarm.com/wp-content/uploads/2023/10/Scattered-.svg" alt="Scattered">
+                            <img src="https://www.demandfarm.com/wp-content/uploads/2023/10/Scattered-.svg"
+                                alt="Scattered">
                             <h6>Expert Panel</h6>
                             <p>Get your templated audited by our panel of seasoned Key Account Mangement Expert</p>
                         </div>
@@ -140,11 +140,67 @@
         </div>
     </section>
     <script>
-       /* $(function(){
-            $('.menuBars').click(function(){
-                $('.menuLinks').fadeToggle();
-            })
-        })*/
+        /* $(function(){
+             $('.menuBars').click(function(){
+                 $('.menuLinks').fadeToggle();
+             })
+         })*/
+
+        function menuOpen(a) {
+            // a === 'open'
+            //     ? (
+            //         document.querySelector(".menuBarsClose,.mobileMenu").style.display = "block",
+            //         document.querySelector(".menuBars").style.display = "none"
+            //         )
+            //     : (
+            //         document.querySelector(".menuBarsClose,.mobileMenu").style.display = "none",
+            //         document.querySelector(".menuBars").style.display = "block"
+            //         );
+
+
+
+            (a=='open')?( document.getElementById("mobileMenuId").style.display = "block",
+            document.querySelector(".menuBars").style.display = "none",
+            document.querySelector(".menuBarsClose ").style.display = "block") :
+            (  document.getElementById("mobileMenuId").style.display = "none",
+            document.querySelector(".menuBars").style.display = "block",
+            document.querySelector(".menuBarsClose").style.display = "none")
+
+        //     if (a=='open'){
+                
+        //     document.getElementById("mobileMenuId").style.display = "block";
+        //     document.querySelector(".menuBars").style.display = "none";
+        //     document.querySelector(".menuBarsClose").style.display = "block";
+
+        //     }else{
+
+        //     document.getElementById("mobileMenuId").style.display = "none";
+        //     document.querySelector(".menuBars").style.display = "block";
+        //     document.querySelector(".menuBarsClose").style.display = "none";
+
+        // }
+
+
+//         if (a === 'open') {
+//     document.querySelector(".menuBarsClose #mobileMenuId").style.display = "block";
+//     document.querySelector(".menuBars").style.display = "none";
+// } else {
+//     document.querySelector(".menuBarsClose #mobileMenuId").style.display = "none";
+//     document.querySelector(".menuBars").style.display = "block";
+
+}
+
+
+        
+
+
+        // function menuClose(){
+           
+        //     document.getElementById("mobileMenuId").style.display = "none";
+        //     document.querySelector(".menuBars").style.display = "block";
+        //     document.querySelector(".menuBarsClose").style.display = "none";
+        // }
+
     </script>
 </body>
 
