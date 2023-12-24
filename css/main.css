@@ -127,8 +127,24 @@ body{
     display: block;
     cursor: pointer;
 }
+
+.menuBarsClose{
+    background-color: red;
+    color: red;
+    margin: 5px 0px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+}
+
 .mobileMenu{
     display: none;
+    padding: 10px;
+    position: absolute;
+    right: 15px;
+    top: 80px;
+    background-color: red;
 }
 @media(max-width:850px){
     .menuLinks{
@@ -144,7 +160,6 @@ body{
         position: absolute;
         right: 15px;
     }
-    .menuBars:hover + .mobileMenu {
-        display: contents;
-    }
+   
+   
 }
